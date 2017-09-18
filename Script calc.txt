@@ -1,0 +1,8 @@
+CREATE SEQUENCE CALCULOS_SEQ INCREMENT BY 1 START WITH 1 NOCACHE
+NOCYCLE;
+create table CALCULOS(codigo number(5) not null,primeiro number(5)not null,operacao char(1)not null,segundo number(5)not null,resultado number(20)not null,
+constraint PK_calc primary key (codigo));
+insert into CALCULOS values (CALCULOS_SEQ.NEXTVAL,1,'+',2,3);
+insert into CALCULOS values (CALCULOS_SEQ.NEXTVAL,1,'*',2,2);
+insert into CALCULOS values (CALCULOS_SEQ.NEXTVAL,2,'-',1,1);
+select * from calculos;
